@@ -1,4 +1,3 @@
-import time
 from selenium.webdriver.common.by import By
 
 
@@ -17,3 +16,4 @@ class Reset_Password_Page:
 
     def link_sent_successfully_text(self):
         self.reset_password_page_driver.find_element(By.XPATH, self.link_sent_successfully_text_locator)
+        return True

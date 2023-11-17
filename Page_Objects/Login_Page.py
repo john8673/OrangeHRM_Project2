@@ -1,4 +1,3 @@
-import time
 from selenium.webdriver.common.by import By
 
 
@@ -9,5 +8,4 @@ class Login_Page:
 
     def forgot_password_link_click(self, username_text):
         self.login_page_driver.find_element(By.XPATH, self.forgot_password_link_locator).click()
-        
 
