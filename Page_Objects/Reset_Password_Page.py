@@ -4,10 +4,13 @@ from selenium.webdriver.common.by import By
 class Reset_Password_Page:
     def __init__(self, driver):
         self.reset_password_page_driver = driver
+
+        # locators of reset password page
         self.username_textbox_locator = "username"
         self.reset_password_button_locator = "//button[text()=' Reset Password ']"
         self.link_sent_successfully_text_locator = "//p[text()='A reset password link has been sent to you via email.']"
 
+    # methods to perform operations in reset password page
     def enter_username(self):
         self.reset_password_page_driver.find_element(By.NAME, self.username_textbox_locator).send_keys("WalterWhite")
 
