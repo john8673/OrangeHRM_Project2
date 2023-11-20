@@ -34,35 +34,35 @@ class Admin_Page:
 
     # method to validate window title of current page
     def admin_page_window_title(self):
-        if self.admin_page_driver.current_window_handle == "OrangeHRM":
+        if self.admin_page_driver.title == "OrangeHRM":
             return True
 
     # methods to validate the dropdown elements present in admin page
-    def user_management_dropdown(self):
+    def user_management_dropdown_validation(self):
         self.admin_page_driver.find_element(By.XPATH, self.user_management_dropdown_locator)
         return True
 
-    def job_dropdown(self):
+    def job_dropdown_validation(self):
         self.admin_page_driver.find_element(By.XPATH, self.job_dropdown_locator)
         return True
 
-    def organization_dropdown(self):
+    def organization_dropdown_validation(self):
         self.admin_page_driver.find_element(By.XPATH, self.organization_dropdown_locator)
         return True
 
-    def qualifications_dropdown(self):
+    def qualifications_dropdown_validation(self):
         self.admin_page_driver.find_element(By.XPATH, self.qualifications_dropdown_locator)
         return True
 
-    def nationalities_dropdown(self):
+    def nationalities_dropdown_validation(self):
         self.admin_page_driver.find_element(By.XPATH, self.nationalities_dropdown_locator)
         return True
 
-    def corporate_branding_dropdown(self):
+    def corporate_branding_dropdown_validation(self):
         self.admin_page_driver.find_element(By.XPATH, self.corporate_branding_dropdown_locator)
         return True
 
-    def configuration_dropdown(self):
+    def configuration_dropdown_validation(self):
         self.admin_page_driver.find_element(By.XPATH, self.configuration_dropdown_locator)
         return True
 
