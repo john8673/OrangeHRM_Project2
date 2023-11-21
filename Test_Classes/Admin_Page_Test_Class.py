@@ -51,6 +51,54 @@ class AdminPageTestCase(unittest.TestCase):
         ap_object = Admin_Page(self.chrome_driver)
         assert ap_object.configuration_dropdown_validation()
 
+    def test_is_admin_page_element_present(self):
+        ap_object = Admin_Page(self.chrome_driver)
+        assert ap_object.admin_page_element_validation()
+
+    def test_is_pim_page_element_present(self):
+        ap_object = Admin_Page(self.chrome_driver)
+        assert ap_object.pim_page_element_validation()
+
+    def test_is_leave_page_element_present(self):
+        ap_object = Admin_Page(self.chrome_driver)
+        assert ap_object.leave_page_element_validation()
+
+    def test_is_time_page_element_present(self):
+        ap_object = Admin_Page(self.chrome_driver)
+        assert ap_object.time_page_element_validation()
+
+    def test_is_recruitment_page_element_present(self):
+        ap_object = Admin_Page(self.chrome_driver)
+        assert ap_object.recruitment_page_element_validation()
+
+    def test_is_my_info_page_element_present(self):
+        ap_object = Admin_Page(self.chrome_driver)
+        assert ap_object.my_info_page_element_validation()
+
+    def test_is_performance_page_element_present(self):
+        ap_object = Admin_Page(self.chrome_driver)
+        assert ap_object.performance_page_element_validation()
+
+    def test_is_dashboard_page_element_present(self):
+        ap_object = Admin_Page(self.chrome_driver)
+        assert ap_object.dashboard_page_element_validation()
+
+    def test_is_directory_page_element_present(self):
+        ap_object = Admin_Page(self.chrome_driver)
+        assert ap_object.directory_page_element_validation()
+
+    def test_is_maintenance_page_element_present(self):
+        ap_object = Admin_Page(self.chrome_driver)
+        assert ap_object.maintenance_page_element_validation()
+
+    def test_is_claim_page_element_present(self):
+        ap_object = Admin_Page(self.chrome_driver)
+        assert ap_object.claim_page_element_validation()
+
+    def test_is_buzz_page_element_present(self):
+        ap_object = Admin_Page(self.chrome_driver)
+        assert ap_object.buzz_page_element_validation()
+
     def tearDown(self) -> None:
         dp_object = Dashboard_Page(self.chrome_driver)
         dp_object.account_dropdown_click()

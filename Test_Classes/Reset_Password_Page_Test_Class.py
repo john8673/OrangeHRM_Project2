@@ -5,7 +5,9 @@ from Page_Objects.Login_Page import Login_Page
 from Page_Objects.Reset_Password_Page import Reset_Password_Page
 
 
-class LoginPageTestCase(unittest.TestCase):
+class ResetPasswordPageTestCase(unittest.TestCase):
+
+    # testcase to validate whether the link is successfully sent
 
     def test_forgot_password_link(self):
         self.chrome_driver = webdriver.Chrome()
@@ -18,4 +20,3 @@ class LoginPageTestCase(unittest.TestCase):
         rp_object.enter_username()
         rp_object.reset_password_button_click()
         assert rp_object.link_sent_successfully_text()
-

@@ -6,7 +6,8 @@ class Admin_Page:
         self.admin_page_driver = driver
         self.admin_page_locator = "//a[@href='/web/index.php/admin/viewAdminModule']"
 
-        # locators of dropdown elements present in Admin page
+        # locators of dropdown elements present in Admin page Header
+
         self.user_management_dropdown_locator = "//span[text()='User Management ']"
         self.job_dropdown_locator = "//span[text()='Job ']"
         self.organization_dropdown_locator = "//span[text()='Organization ']"
@@ -15,7 +16,8 @@ class Admin_Page:
         self.corporate_branding_dropdown_locator = "//a[text()='Corporate Branding']"
         self.configuration_dropdown_locator = "//span[text()='Configuration ']"
 
-        # locators of various pages mentioned in leftmost of the page
+        # locators of Main menu elements
+
         self.pim_page_locator = "//a[@href='/web/index.php/pim/viewPimModule']"
         self.leave_page_locator = "//a[@href='/web/index.php/leave/viewLeaveModule']"
         self.time_page_locator = "//a[@href='/web/index.php/time/viewTimeModule']"
@@ -28,16 +30,19 @@ class Admin_Page:
         self.claim_page_locator = "//a[@href='/web/index.php/claim/viewClaimModule']"
         self.buzz_page_locator = "//a[@href='/web/index.php/buzz/viewBuzz']"
 
-    # method to perform click operation of admin page
+# method to perform click operation of admin page
+
     def admin_page_click(self):
         self.admin_page_driver.find_element(By.XPATH, self.admin_page_locator).click()
 
-    # method to validate window title of current page
+# method to validate window title of current page
+
     def admin_page_window_title(self):
         if self.admin_page_driver.title == "OrangeHRM":
             return True
 
-    # methods to validate the dropdown elements present in admin page
+# methods to validate the dropdown elements present in admin page
+
     def user_management_dropdown_validation(self):
         self.admin_page_driver.find_element(By.XPATH, self.user_management_dropdown_locator)
         return True
@@ -66,7 +71,8 @@ class Admin_Page:
         self.admin_page_driver.find_element(By.XPATH, self.configuration_dropdown_locator)
         return True
 
-    # methods to validate the various pages mentioned in leftmost of the page
+# methods to validate the Main menu elements
+
     def admin_page_element_validation(self):
         self.admin_page_driver.find_element(By.XPATH, self.admin_page_locator)
         return True

@@ -6,16 +6,21 @@ class Login_Page:
         self.login_page_driver = driver
 
         # locator for forgot password button
+
         self.forgot_password_link_locator = "//p[text()='Forgot your password? ']"
 
         # locators for login operation attributes
+
         self.username_textbox_locator = "username"
         self.password_textbox_locator = "password"
         self.login_button_locator = "//button[@type='submit']"
 
-    # method to perform click operation
+# method to perform click operation
+
     def forgot_password_link_click(self):
         self.login_page_driver.find_element(By.XPATH, self.forgot_password_link_locator).click()
+
+# methods to perform login operation
 
     def enter_username(self):
         self.login_page_driver.find_element(By.NAME, self.username_textbox_locator).send_keys("Admin")
