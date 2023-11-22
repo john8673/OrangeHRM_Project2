@@ -1,5 +1,6 @@
-from selenium import webdriver
 import unittest
+
+from selenium import webdriver
 
 from Page_Objects.Login_Page import Login_Page
 from Page_Objects.Reset_Password_Page import Reset_Password_Page

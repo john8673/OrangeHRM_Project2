@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 class Admin_Page:
     def __init__(self, driver):
         self.admin_page_driver = driver
-        self.admin_page_locator = "//a[@href='/web/index.php/admin/viewAdminModule']"
 
         # locators of dropdown elements present in Admin page Header
 
@@ -18,6 +17,7 @@ class Admin_Page:
 
         # locators of Main menu elements
 
+        self.admin_page_locator = "//a[@href='/web/index.php/admin/viewAdminModule']"
         self.pim_page_locator = "//a[@href='/web/index.php/pim/viewPimModule']"
         self.leave_page_locator = "//a[@href='/web/index.php/leave/viewLeaveModule']"
         self.time_page_locator = "//a[@href='/web/index.php/time/viewTimeModule']"
@@ -30,18 +30,18 @@ class Admin_Page:
         self.claim_page_locator = "//a[@href='/web/index.php/claim/viewClaimModule']"
         self.buzz_page_locator = "//a[@href='/web/index.php/buzz/viewBuzz']"
 
-# method to perform click operation of admin page
+    # method to perform click operation of admin page
 
     def admin_page_click(self):
         self.admin_page_driver.find_element(By.XPATH, self.admin_page_locator).click()
 
-# method to validate window title of current page
+    # method to validate window title of current page
 
     def admin_page_window_title(self):
         if self.admin_page_driver.title == "OrangeHRM":
             return True
 
-# methods to validate the dropdown elements present in admin page
+    # From line 46 to line 72, methods to validate the dropdown elements present in admin page
 
     def user_management_dropdown_validation(self):
         self.admin_page_driver.find_element(By.XPATH, self.user_management_dropdown_locator)
@@ -71,7 +71,7 @@ class Admin_Page:
         self.admin_page_driver.find_element(By.XPATH, self.configuration_dropdown_locator)
         return True
 
-# methods to validate the Main menu elements
+    # From line 76 to line 122, methods to validate the Main menu elements
 
     def admin_page_element_validation(self):
         self.admin_page_driver.find_element(By.XPATH, self.admin_page_locator)

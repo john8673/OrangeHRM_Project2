@@ -10,7 +10,7 @@ class Dashboard_Page:
         self.account_dropdown_locator = "oxd-userdropdown-tab"
         self.logout_button_locator = "//a[text()='Logout']"
 
-# methods to perform logout operations
+    # methods to perform logout operations
 
     def account_dropdown_click(self):
         self.dashboard_page_driver.find_element(By.CLASS_NAME, self.account_dropdown_locator).click()
