@@ -47,3 +47,5 @@ try:
 except ResourceWarning:
 
     print("Exception handled")"
+
+*I also searched the internet for answers concerning this exception as no files were opened to get sample test data. But I suppose this is because the Page_Objects are imported. Please suggest a way to get around this exception for unclosed file while we open Page Objects files*
