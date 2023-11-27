@@ -59,7 +59,7 @@ class AdminPageTestCase(unittest.TestCase):
         ap_object = Admin_Page(self.chrome_driver)
         assert ap_object.configuration_dropdown_validation()
 
-    # From line 61 to line 107, testcases to validate Main menu elements
+    # From line 61 to line 114, testcases to validate Main menu elements
 
     # Some elements are constantly removed and added back in the main menu. Like, Recruitment, Performance and Claim
     # page are removed while I ran the test cases after submitting. Please be mindful of what are the testcases that are
