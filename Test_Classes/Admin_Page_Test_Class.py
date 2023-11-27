@@ -61,6 +61,10 @@ class AdminPageTestCase(unittest.TestCase):
 
     # From line 61 to line 107, testcases to validate Main menu elements
 
+    # Some elements are constantly removed and added back in the main menu. Like, Recruitment, Performance and Claim
+    # page are removed while I ran the test cases after submitting. Please be mindful of what are the testcases that are
+    # failing and verify that main menu element is present in the webpage.
+
     def test_is_admin_page_element_present(self):
         ap_object = Admin_Page(self.chrome_driver)
         assert ap_object.admin_page_element_validation()
